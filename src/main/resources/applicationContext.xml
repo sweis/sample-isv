@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans
+	xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:context="http://www.springframework.org/schema/context"
+	xsi:schemaLocation="
+		http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-3.0.xsd
+		http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context-3.0.xsd
+	">
+	<context:property-placeholder location="classpath:database.properties" />
+	<context:component-scan base-package="com.origonetworks.isv" />
+	<bean id="serverProperties" class="org.springframework.beans.factory.config.PropertiesFactoryBean">
+		<property name="location" value="classpath:server.properties" />
+	</bean>
+	<bean id="serverConfiguration" class="com.origonetworks.isv.backend.core.util.ServerConfiguration">
+		<property name="properties" ref="serverProperties" />
+	</bean>
+	<bean id="accountDao" class="com.origonetworks.isv.backend.core.dao.GenericHibernateDAOImpl">
+		<constructor-arg>
+			<value>com.origonetworks.isv.backend.user.model.Account</value>
+		</constructor-arg>
+		<property name="sessionFactory" ref="sessionFactory" />
+	</bean>
+	<bean id="userDao" class="com.origonetworks.isv.backend.core.dao.GenericHibernateDAOImpl">
+		<constructor-arg>
+			<value>com.origonetworks.isv.backend.user.model.User</value>
+		</constructor-arg>
+		<property name="sessionFactory" ref="sessionFactory" />
+	</bean>
+</beans>

@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans:beans
+	xmlns="http://www.springframework.org/schema/security"
+	xmlns:beans="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="
+		http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-3.0.xsd
+		http://www.springframework.org/schema/security http://www.springframework.org/schema/security/spring-security-3.0.xsd
+	">
+	<http use-expressions="true">
+		<intercept-url pattern="/**" access="permitAll" />
+		<form-login login-page="/login" />
+	</http>
+	<authentication-manager alias="authenticationManager">
+		<authentication-provider user-service-ref="userDetailsService" />
+	</authentication-manager>
+	<beans:bean id="passwordEncoder" class="org.springframework.security.authentication.encoding.ShaPasswordEncoder">
+		<beans:constructor-arg value="256" />
+	</beans:bean>
+	<beans:bean id="saltSource" class="org.springframework.security.authentication.dao.ReflectionSaltSource">
+		<beans:property name="userPropertyToUse" value="uuid" />
+	</beans:bean>
+	<global-method-security secured-annotations="enabled" />
+	<!-- OpenID Beans -->
+	<beans:bean id="openIdConsumer" class="org.springframework.security.openid.OpenID4JavaConsumer" />
+	<beans:bean id="openIdAuthenticationProvider" class="org.springframework.security.openid.OpenIDAuthenticationProvider">
+		<beans:property name="userDetailsService" ref="openIdUserDetailsService" />
+	</beans:bean>
+</beans:beans>

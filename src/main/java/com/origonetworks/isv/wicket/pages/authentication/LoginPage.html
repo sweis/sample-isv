@@ -1,0 +1,25 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html xmlns:wicket="http://wicket.apache.org/dtds.data/wicket-xhtml1.4-strict.dtd">
+	<wicket:head>
+		<title>Login</title>
+	</wicket:head>
+	<wicket:extend>
+		<div>
+			<h1>Login</h1>
+		</div>
+		<div id="openId" style="background-color: lightGrey; margin: 10px; padding: 10px;">
+			<form action="openidlogin" method="post">
+				<span wicket:id="feedback"></span>
+				<div>
+					<label for="openid_identifier">OpenID:</label>
+					<input id="openid_identifier" name="openid_identifier" size="50" maxlength="100" type="text" />
+					<img src="http://openid.net/wordpress-content/themes/openid/images/logo_openid.png" alt="OpenID"/>
+					<input type="submit" value="Login"/>
+				</div>
+			</form>
+		</div>
+		<div id="usernamePwd" style="background-color: lightGrey; margin: 10px; padding: 10px;">
+			<div wicket:id="signInPanel"></div>
+		</div>
+	</wicket:extend>
+</html>

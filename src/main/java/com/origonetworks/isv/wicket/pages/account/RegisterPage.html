@@ -1,0 +1,66 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html xmlns:wicket="http://wicket.apache.org/dtds.data/wicket-xhtml1.4-strict.dtd">
+	<wicket:head>
+		<title>Register</title>
+	</wicket:head>
+	<wicket:extend>
+		<div>
+			<h1>Register your account</h1>
+		</div>
+		<form wicket:id="registerForm">
+			<div style="background-color: lightGrey; margin: 10px; padding: 10px;">
+				<div>
+					<h2>Account Information</h2>
+				</div>
+				<div>
+					<span>Identifier</span>
+					<input type="text" wicket:id="identifier" />
+				</div>
+				<div>
+					<span>Edition Code</span>
+					<input type="text" wicket:id="editionCode" />
+				</div>
+				<div>
+					<span>Number of users</span>
+					<input type="text" wicket:id="maxUsers" />
+				</div>
+			</div>
+			<div style="background-color: lightGrey; margin: 10px; padding: 10px;">
+				<div>
+					<h2>User Information</h2>
+				</div>
+				<div>
+					<span>Username</span>
+					<input type="text" wicket:id="username" />
+				</div>
+				<div>
+					<span>Password</span>
+					<input type="text" wicket:id="password" />
+				</div>
+				<div>
+					<span>Email</span>
+					<input type="text" wicket:id="email" />
+				</div>
+				<div>
+					<span>First Name</span>
+					<input type="text" wicket:id="firstName" />
+				</div>
+				<div>
+					<span>Last Name</span>
+					<input type="text" wicket:id="lastName" />
+				</div>
+				<div>
+					<span>Zip Code</span>
+					<input type="text" wicket:id="zipCode" />
+				</div>
+				<div>
+					<span>Department</span>
+					<input type="text" wicket:id="department" />
+				</div>
+			</div>
+			<div>
+				<button wicket:id="createButton">Create Account</button>
+			</div>
+		</form>
+	</wicket:extend>
+</html>

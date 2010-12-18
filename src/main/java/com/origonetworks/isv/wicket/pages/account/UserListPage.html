@@ -1,0 +1,41 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html xmlns:wicket="http://wicket.apache.org/dtds.data/wicket-xhtml1.4-strict.dtd">
+	<wicket:head>
+		<title>User List</title>
+	</wicket:head>
+	<wicket:extend>
+		<div>
+			<h1>User List</h1>
+		</div>
+		<table style="border-collapse: collapse;">
+			<thead>
+				<tr>
+					<th style="border: 1px solid;">ID</th>
+					<th style="border: 1px solid;">Username</th>
+					<th style="border: 1px solid;">Password</th>
+					<th style="border: 1px solid;">OpenID</th>
+					<th style="border: 1px solid;">Email</th>
+					<th style="border: 1px solid;">First Name</th>
+					<th style="border: 1px solid;">Last Name</th>
+					<th style="border: 1px solid;">Zip Code</th>
+					<th style="border: 1px solid;">Department</th>
+					<th style="border: 1px solid;">Admin</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr wicket:id="row">
+					<td style="border: 1px solid;"><span wicket:id="userId"></span></td>
+					<td style="border: 1px solid;"><span wicket:id="username"></span></td>
+					<td style="border: 1px solid;"><span wicket:id="password"></span></td>
+					<td style="border: 1px solid;"><span wicket:id="openId"></span></td>
+					<td style="border: 1px solid;"><span wicket:id="email"></span></td>
+					<td style="border: 1px solid;"><span wicket:id="firstName"></span></td>
+					<td style="border: 1px solid;"><span wicket:id="lastName"></span></td>
+					<td style="border: 1px solid;"><span wicket:id="zipCode"></span></td>
+					<td style="border: 1px solid;"><span wicket:id="department"></span></td>
+					<td style="border: 1px solid;"><span wicket:id="isAdmin"></span></td>
+				</tr>
+			</tbody>
+		</table>
+	</wicket:extend>
+</html>

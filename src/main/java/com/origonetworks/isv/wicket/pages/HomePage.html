@@ -1,0 +1,31 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html xmlns:wicket="http://wicket.apache.org/dtds.data/wicket-xhtml1.4-strict.dtd">
+	<wicket:head>
+		<title>ISV Home</title>
+	</wicket:head>
+	<wicket:extend>
+		<div>
+			<h1>Welcome to the sample ISV application!</h1>
+		</div>
+		<div>
+			<table style="border-collapse: collapse;">
+				<thead>
+					<tr>
+						<th style="border: 1px solid;">ID</th>
+						<th style="border: 1px solid;">Identifier</th>
+						<th style="border: 1px solid;">Edition Code</th>
+						<th style="border: 1px solid;">Max Users</th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr wicket:id="row">
+						<td style="border: 1px solid;"><a wicket:id="idLink"><span wicket:id="id"></span></a></td>
+						<td style="border: 1px solid;"><a wicket:id="identifierLink"><span wicket:id="identifier"></span></a></td>
+						<td style="border: 1px solid;"><span wicket:id="editionCode"></span></td>
+						<td style="border: 1px solid;"><span wicket:id="maxUsers"></span></td>
+					</tr>
+				</tbody>
+			</table>
+		</div>
+	</wicket:extend>
+</html>

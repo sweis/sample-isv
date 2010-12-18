@@ -1,0 +1,23 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html xmlns:wicket="http://wicket.apache.org/dtds.data/wicket-xhtml1.4-strict.dtd">
+	<body>
+		<div>
+			<a wicket:id="home">Home</a>
+			<a wicket:id="account">Account</a>
+			<a wicket:id="register">Register</a>
+			<a wicket:id="userList">User List</a>
+			<a wicket:id="login">Login</a>
+			<a wicket:id="logout">Logout</a>
+			<span wicket:id="loginInfo">
+				<span style="font-weight: bold;">Login Information:</span>
+				<span style="background-color: lightBlue;">
+					<span>User Name:&nbsp;</span>
+					<span wicket:id="firstName"></span>&nbsp;<span wicket:id="lastName"></span>
+					<span>OpenID:&nbsp;</span>
+					<span wicket:id="openId"></span>
+				</span>
+			</span>
+		</div>
+		<wicket:child />
+	</body>
+</html>

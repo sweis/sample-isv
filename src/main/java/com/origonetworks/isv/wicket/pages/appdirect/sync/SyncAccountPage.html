@@ -1,0 +1,35 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html xmlns:wicket="http://wicket.apache.org/dtds.data/wicket-xhtml1.4-strict.dtd">
+	<wicket:head>
+		<title>AppDirect Connect - Sync Account</title>
+	</wicket:head>
+	<wicket:extend>
+		<div>
+			<h1>Account Sync</h1>
+		</div>
+		<div>
+			<div>
+				<span><b>Your AppDirect OpenID: </b></span><span wicket:id="openid"></span>
+			</div>
+			<div>
+				<span><b>Your AppDirect Email: </b></span><span wicket:id="email"></span>
+			</div>
+			<div>
+				<span><b>Your Name: </b></span><span wicket:id="name"></span>
+			</div>
+			<div>
+				<span><b>Your AppDirect Company Name: </b></span><span wicket:id="companyName"></span>
+			</div>
+			<div>
+				<span><b>Your AppDirect Company Email: </b></span><span wicket:id="companyEmail"></span>
+			</div>
+			<div>
+				<span><b>You will be redirected to: </b></span><span wicket:id="returnUrl"></span>
+			</div>
+			<div>
+				<button wicket:id="connect">Connect</button>
+				<button wicket:id="cancel">Cancel</button>
+			</div>
+		</div>
+	</wicket:extend>
+</html>
